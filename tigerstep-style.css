@@ -1,0 +1,209 @@
+/* TigerStep theme: white page, charcoal type, tiger-gold accents. */
+
+:root {
+  --ink: #1F1D1A;
+  --ink-soft: #5F5A52;
+  --gold: #C07C17;
+  --gold-tint: #FBF3E4;
+  --line: #E3DFD8;
+  --field-line: #C9C3BA;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 16px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -.3px;
+}
+
+header h1::after {
+  /* Short gold rule under the title instead of a full colored band. */
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: 14px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+header p {
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+}
+
+section {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 26px 28px;
+  margin-bottom: 24px;
+}
+
+section h2 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--ink);
+}
+
+section p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+/* The instructions card gets a soft tinted fill so it reads as a note. */
+main section:first-of-type {
+  background: var(--gold-tint);
+  border-color: #EFE3CD;
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 22px 22px;
+  margin: 0 0 22px;
+}
+
+legend {
+  padding: 0 8px;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 18px 0 6px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--ink);
+  background: #ffffff;
+  border: 1px solid var(--field-line);
+  border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9C968D;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(192, 124, 23, .18);
+}
+
+input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  vertical-align: middle;
+  accent-color: var(--gold);
+}
+
+fieldset label[for="receiptAttached"] {
+  display: inline;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+button {
+  background: var(--ink);
+  color: #ffffff;
+  border: 1px solid var(--ink);
+  border-radius: 5px;
+  padding: 12px 26px;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 22px 16px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: .85rem;
+}
+
+footer p {
+  margin: 3px 0;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding-top: 32px;
+  }
+
+  header h1 {
+    font-size: 1.55rem;
+  }
+
+  section {
+    padding: 20px 18px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
