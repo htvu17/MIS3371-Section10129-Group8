@@ -17,11 +17,9 @@
 
   <!-- Helps the page display properly on different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="tigerstep-style.css">
+
   <!-- Appears in the browser tab -->
-  <title>Return Request</title>
-
-
+  <title>Expense Reimbursement</title>
 </head>
 
 <body>
@@ -47,7 +45,7 @@
     -->
     <section>
       <h2>Before You Submit</h2>
-      <p>Please have your Customer ID, phone number, email address, and receipt information ready.</p>
+      <p>Please have your name, phone number, email address, and receipt information ready.</p>
     </section>
 
     <!--
@@ -87,10 +85,10 @@
             for="employeeId" must match id="employeeId".
             This connects the visible label to the input.
           -->
-          <label for="CustomerID">Customer ID</label>
+          <label for="CustName">Customer Name</label>
           <input
-            id="CustomerID"
-            name="CustomerID"
+            id="CustName"
+            name="CustName"
             type="text"
             required
           >
@@ -137,6 +135,30 @@
             type="date"
             required
           >
+
+          <br><br>
+
+          <!-- =====================================================
+               PRODUCT
+               ===================================================== -->
+
+          <label for="Product">Product</label>
+
+          <!--
+            <select> is appropriate because the business allows
+            a known set of products.
+          -->
+          <select
+            id="Product"
+            name="Product"
+            required
+          >
+            <option value="">Choose a product</option>
+            <option value="Model 1">Model 1</option>
+            <option value="Model 2">Model 2</option>
+            <option value="Model 3">Model 3</option>
+            <option value="other">Other</option>
+          </select>
 
           <br><br>
 
