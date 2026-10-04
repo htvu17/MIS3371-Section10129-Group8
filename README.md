@@ -21,7 +21,6 @@ This creates three problems. It is inconvenient for the customer, who must make 
 The system is built around a single business transaction: **a customer submits one online footwear return request for a previous TigerSteps purchase.**
 
 | | |
-|---|---|
 | **Event** | A customer submits one online footwear return request for a previous TigerSteps purchase. |
 | **Trigger** | The customer decides to return footwear from a previous TigerSteps purchase. |
 | **Inputs** | Customer ID, order number, item being returned, return quantity, return reason, reported item condition, preferred refund method. |
